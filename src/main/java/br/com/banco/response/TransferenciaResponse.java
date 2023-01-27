@@ -1,4 +1,4 @@
-package br.com.banco.entities.Transferencia;
+package br.com.banco.response;
 
 import br.com.banco.Enums.TipoTransferencia;
 import br.com.banco.entities.Conta.Conta;
@@ -7,17 +7,13 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
 import java.time.LocalDate;
 
 @Data
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
-@Entity
-@Table(name = "transferencias")
-public class Transferencia {
+public class TransferenciaResponse {
 
     private Long id;
     private LocalDate data_transferencia;
