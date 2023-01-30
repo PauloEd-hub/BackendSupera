@@ -12,12 +12,13 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Builder
 @Entity
-@Table(name = "contas")
 public class Conta {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id_conta;
+    @Column(name = "id_conta")
+    private Long id;
+    @Column(length = 50)
     private String nome_responsavel;
 
 }

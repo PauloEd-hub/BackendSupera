@@ -7,8 +7,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.time.LocalDate;
 
 @Data
@@ -16,13 +15,17 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @Builder
 @Entity
-@Table(name = "transferencias")
 public class Transferencia {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private LocalDate data_transferencia;
-    private double valor;
+    private float valor;
+    @Column(length = 15)
     private TipoTransferencia tipo;
+    @Enumerated(EnumType.STRING)
+    @Column(length = 50)
     private String nome_operador_transacao;
     private Conta conta_id;
 }

@@ -11,7 +11,7 @@ import java.time.LocalDate;
 @Builder
 public class TransferenciaRequest {
     private LocalDate data_transferencia;
-    private double valor;
+    private float valor;
     private TipoTransferencia tipo;
     private String nome_operador_transacao;
     private Conta conta_id;

@@ -17,7 +17,7 @@ public class TransferenciaResponse {
 
     private Long id;
     private LocalDate data_transferencia;
-    private double valor;
+    private float valor;
     private TipoTransferencia tipo;
     private String nome_operador_transacao;
     private Conta conta_id;
