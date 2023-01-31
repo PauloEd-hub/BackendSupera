@@ -23,9 +23,11 @@ public class Transferencia {
     private LocalDate data_transferencia;
     private float valor;
     @Column(length = 15)
-    private TipoTransferencia tipo;
     @Enumerated(EnumType.STRING)
+    private TipoTransferencia tipo;
+
     @Column(length = 50)
     private String nome_operador_transacao;
-    private Conta conta_id;
+//    @Json
+//    private Conta conta_id;
 }
